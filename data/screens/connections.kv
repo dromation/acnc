@@ -1,0 +1,48 @@
+#:import KivyLexer kivy.extras.highlight.KivyLexer
+#:import Factory kivy.factory.Factory
+
+ConnectionsScreen:
+
+
+    id: Connections
+    name: "Connections"
+
+    MDFloatingActionButtonSpeedDial:
+            data: app.statusmenu
+            root_button_anim: True
+            #label_text_color: 1,0,0,1 #texti poleg gumbov
+            #bg_color_stack_button:1,0,0,1 #gumbi v meniju 
+            #bg_color_root_button: 1,0,0,1 #gumb za meni
+            #color_icon_root_button: 1,0,0,1 #znak v gumba meni
+            #color_icon_stack_button: 1,0,0,1 #barva ikon
+            bg_hint_color: 'red' #ko odpres meni se barva spremeni
+
+            callback: app.stmenucallback
+
+            #odpri
+            on_open: app.stmenuopen()
+            on_close: app.stmenuclose()
+
+    MDTabs:
+
+        Tab:
+            id: ports
+            title: "Ports"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}
+        
+        Tab:
+            id: protocols
+            title: "Protocols"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+        Tab:
+            id: modbus
+            title: "Modbus"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+        
+    
+

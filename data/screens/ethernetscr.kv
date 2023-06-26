@@ -1,0 +1,75 @@
+EthernetScreen:
+    id: ethernetsrc
+    orientation: 'vertical'
+    MDBoxLayout:
+        orientation: 'horizontal'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+        size_hint: 1.0 , 0.1
+        spacing: ("12dp")
+
+        MDLabel:
+            text: "Please select connection protocol settings"
+            md_bg_color: app.theme_cls.primary_color
+        MDTextField:
+            hint_text: "Connection type"
+        
+        MDTextField:
+            hint_text: "Select connection protocol"
+    MDLabel:
+        size_hint: 1.0, 0.05
+        pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+        md_bg_color: app.theme_cls.primary_color
+        text: "ETHERNET CONNECTION Test"
+
+    MDGridLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        spacing: ("12dp")
+        rows: 3
+        cols: 5
+        size_hint: 1.0 , 0.3
+
+        MDLabel:
+            text: "Manual input for ethernet settings. /n Hit Connect button, for test. Results will be /n stored in data file, where you can load them"
+        MDRaisedButton: 
+            text: "CONNECT"
+        MDRaisedButton: 
+            text: "SAVE SETTINGS"
+        MDRaisedButton: 
+            text: "LOAD SETTINGS"
+        MDCard:
+            size_hint: 0.2, 0.1
+            MDSwitch:
+                text: "CONNECTION STATUS"
+        
+        MDTextField:
+            hint_text: "Connection type"
+        
+        MDTextField:
+            hint_text: "Select connection protocol"
+
+        MDTextField:
+            hint_text: "Enter IP address number"
+    
+        MDTextField:
+            hint_text: "Enter subnet mask"
+        
+        MDTextField:
+            hint_text: "Enter gateway number"
+        MDTextField:
+            hint_text: "port"
+        MDTextField:
+            hint_text: "Target IP address number"
+        MDTextField:
+            hint_text: "Enter DNS number"
+        MDTextField:
+            hint_text: "Input alternate dns number"
+
+
+    
+    MDBoxLayout:
+        orientation: 'horizontal'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+        spacing: ("12dp")
+        size_hint: 1.0 , 0.1
+
+        

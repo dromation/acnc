@@ -1,0 +1,26 @@
+#:import KivyLexer kivy.extras.highlight.KivyLexer
+#:import Factory kivy.factory.Factory
+
+ParametersScreen:    
+    id: Parameters
+    name: "Parameters"
+
+    MDTabs:
+
+        Tab:
+            id: inputs
+            title: "INPUTS"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}
+        
+        Tab:
+            id: outputs
+            title: "OUTPUTS"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+        Tab:
+            id: paratable
+            title: "Table of parameters"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}

@@ -1,0 +1,27 @@
+    MDBoxLayout:
+        orientation: "vertical"
+        pos_hint: {"center_x": .5, "center_y": .5}
+        #adaptive_size: True
+        spacing: dp(48)
+    #pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    #size_hint: 0.4, 0.9
+        #MDTopAppBar:
+        #   title: "Fault Tree Analsys"
+            #pos_hint: {"top": 1}
+        MDTabs:
+            id: tabs
+            on_tab_switch: app.on_tab_switch(*args)
+
+
+<Tab1>
+    MDLabel:
+        id: label
+<Tab2>
+    MDLabel:
+        id: label
+<Tablica1>
+    MDLabel:
+        id: label
+<Tablica2>
+    MDLabel:
+        id: label

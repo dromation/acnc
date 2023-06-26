@@ -1,0 +1,76 @@
+<RS232Screen>
+    id: ethernetsrc
+    orientation: 'vertical'
+    MDTopAppBar:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.95}
+        size_hint: 1, 0.1
+        title: "RS232 CONNECTIONS SETTINGS"
+
+    MDGridLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        spacing: ("12dp")
+        rows: 2
+        cols: 5
+        size_hint: 0.9 , 0.3
+
+
+        
+        MDTextField:
+            hint_text: "PORT"
+        
+        MDTextField:
+            hint_text: "BAND RATE"
+
+        MDTextField:
+            hint_text: "PARITY"
+    
+        MDTextField:
+            hint_text: "DATA BITS"
+        
+        MDTextField:
+            hint_text: "STOP BITS"
+        MDTextField:
+            hint_text: "FLOW CONTROL"
+        MDTextField:
+            hint_text: "BUFFER SIZE"
+        MDTextField:
+            hint_text: "TERMINATOR CHAR(S)"
+        MDTextField:
+            hint_text: "READ TIMEOUT"
+
+        
+    
+
+    MDBoxLayout:
+        id: chip_box
+        orientation: 'horizontal'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+        spacing: ("12dp")
+        size_hint: 0.9 , 0.3
+        MDRaisedButton: 
+            text: "CONNECT"
+        MDRaisedButton: 
+            text: "SAVE SETTINGS"
+        MDRaisedButton: 
+            text: "LOAD SETTINGS"
+        MyChip:
+            text: "DTR"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+        MyChip:
+            text: "RTS"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+        MyChip:
+            text: "Overlapped"
+            on_press: if self.active: root.removes_marks_all_chips()
+        MyChip:
+            text: "CTS"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+        MyChip:
+            text: "DSR"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+ScreenManager:
+    RS232Screen:

@@ -1,0 +1,26 @@
+#:import KivyLexer kivy.extras.highlight.KivyLexer
+#:import Factory kivy.factory.Factory
+
+<Control>:
+    id: Controls
+    name: "Controls"
+
+    MDTabs:
+
+        Tab:
+            id: controlsettings
+            title: "Control Settings"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}
+        
+        Tab:
+            id: monitoring
+            title: "Monitoring"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+        Tab:
+            id: operations
+            title: "Operations"
+            MDFloatLayout:
+                pos_hint:{"center_x": 0.5, "center_y": 0.5}

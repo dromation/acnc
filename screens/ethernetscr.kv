@@ -1,0 +1,73 @@
+<EthernetScreen>
+    id: ethernetsrc
+    orientation: 'vertical'
+    MDTopAppBar:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.95}
+        size_hint: 1, 0.1
+        title: "ETHERNET CONNECTIONS SETTINGS"
+    
+
+    MDGridLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        spacing: ("12dp")
+        rows: 3
+        cols: 5
+        size_hint: 1.0 , 0.3
+
+        
+        MDRaisedButton: 
+            text: "CONNECT"
+        MDRaisedButton: 
+            text: "SAVE SETTINGS"
+        MDRaisedButton: 
+            text: "LOAD SETTINGS"
+        
+        
+        MDTextField:
+            hint_text: "Connection type"
+        
+        MDTextField:
+            hint_text: "Select connection protocol"
+
+        MDTextField:
+            hint_text: "Enter IP address number"
+    
+        MDTextField:
+            hint_text: "Enter subnet mask"
+        
+        MDTextField:
+            hint_text: "Enter gateway number"
+        MDTextField:
+            hint_text: "port"
+        MDTextField:
+            hint_text: "Target IP address number"
+        MDTextField:
+            hint_text: "Enter DNS number"
+        MDTextField:
+            hint_text: "Input alternate dns number"
+
+
+    
+    MDBoxLayout:
+        id: chip_box
+        orientation: 'horizontal'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+        spacing: ("12dp")
+        size_hint: 0.9 , 0.3
+        MDRaisedButton: 
+            text: "CONNECT"
+        MDRaisedButton: 
+            text: "SAVE SETTINGS"
+        MDRaisedButton: 
+            text: "LOAD SETTINGS"
+        MyChip:
+            text: "AUTOTEST"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+    MDLabel:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
+        text: "Manual input for ethernet settings. /n Hit Connect button, for test. Results will be /n stored in data file, where you can load them" 
+
+ScreenManager:
+    EthernetScreen:

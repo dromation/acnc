@@ -1,0 +1,22 @@
+#:import KivyLexer kivy.extras.highlight.KivyLexer
+#:import Factory kivy.factory.Factory
+
+<Signals>:
+    id: Signals
+    name: "Status"
+
+    MDBoxLayout:
+        id: signal_monitoring
+
+    ScreenManager:
+        id: signal_screener
+
+        MDScreen:
+            id: analog
+        
+        MDScreen:
+            id: digital
+        
+        MDScreen:
+            id: signal_settings
+        

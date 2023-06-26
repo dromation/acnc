@@ -1,0 +1,95 @@
+<ModbusScreen>
+    id: modbusscr
+    orientation: 'vertical'
+    MDTopAppBar:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.95}
+        size_hint: 1, 0.1
+        title: "MODBUS CONNECTIONS SETTINGS"
+
+    MDGridLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        spacing: ("12dp")
+        rows: 5
+        cols: 4
+        size_hint: 0.9 , 0.3
+
+
+        
+        MDTextField:
+            hint_text: "IP Address"
+        
+        MDTextField:
+            hint_text: "PLC Port"
+        MDTextField:
+            hint_text: "Local TCP Port"
+        MDTextField:
+            hint_text: "PLC Slave Number"
+        MDTextField:
+            hint_text: "Max connections"
+        MDTextField:
+            hint_text: "Byte Order"
+        
+        MDTextField:
+            hint_text: "Word Order"
+        MDTextField:
+            hint_text: "Char register"
+        MDTextField:
+            hint_text: "Registers per message"
+        MDTextField:
+            hint_text: "Coils per message"
+        MDTextField:
+            hint_text: "Register write function code"
+        MDTextField:
+            hint_text: "Coil write function code"
+        MDTextField:
+            hint_text: "Register write function code"
+        MDTextField:
+            hint_text: "Time between frames"
+        MDTextField:
+            hint_text: "Baud Rate"
+        MDTextField:
+            hint_text: "Parity"
+        MDTextField:
+            hint_text: "Data bits"
+        MDTextField:
+            hint_text: "Stop bits"
+        MDTextField:
+            hint_text: "Data Range"
+        MDTextField:
+            hint_text: "Alarm priority"
+            md_bg_color: "red"
+
+
+    MDBoxLayout:
+        id: chip_box
+        orientation: 'horizontal'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+        spacing: ("12dp")
+        size_hint: 0.9 , 0.3
+        MDRaisedButton: 
+            text: "CONNECT"
+        MDRaisedButton: 
+            text: "SAVE SETTINGS"
+        MDRaisedButton: 
+            text: "LOAD SETTINGS"
+        MyChip:
+            text: "RTU"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+        MyChip:
+            text: "ASCII"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+        MyChip:
+            text: "RS232 METHOD"
+            on_press: if self.active: root.removes_marks_all_chips()
+        MyChip:
+            text: "RS485 METHOD"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+        MyChip:
+            text: "TCP/IP METHOD"
+            on_press: if self.active: root.removes_marks_all_chips()
+
+ScreenManager:
+    ModbusScreen:
