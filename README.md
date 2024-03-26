@@ -8,6 +8,10 @@ As of now, this is only a testing application, in the beta stage.
 
 | Version | Supported          |  Comments                                                  |  Legal Requirements  |
 | ------- | ------------------ |  --------------------------------------------------------- |  ------------------  |
+| 0.8.5   | :white_check_mark: |  Database connections added                                                 |                      |
+| 0.8.x   | :white_check_mark: |  Updated GUIs with KivyMD                                                |                      |
+| 0.7.x   | :white_check_mark: |  Added fault tree table                                                 |                      |
+| 0.6.x   | :white_check_mark: |  Updated structure, parameters added                                                |                      |
 | 0.5.x   | :white_check_mark: |  Added desc, license, comms                                                 |                      |
 | 0.4.x   | :white_check_mark: |                                                            |                      |
 | 0.3.x   | :white_check_mark: |                                                            |                      |
